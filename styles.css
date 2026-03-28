@@ -162,11 +162,13 @@ a:hover {
   gap: 1.25rem;
   font-size: 0.9375rem;
   font-weight: 500;
+  min-height: 44px;
 }
 
 .site-nav a {
   color: var(--ink);
   text-decoration: none;
+  padding: 0.625rem 0;
 }
 
 .site-nav a:hover {
@@ -220,6 +222,7 @@ a:hover {
 
 .subnav a {
   color: var(--link);
+  padding: 0.625rem 0;
 }
 
 .subnav a:hover {
