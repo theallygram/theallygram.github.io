@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -23,76 +23,65 @@
         <div class="aurora-grain"></div>
       </div>
 
-      <header class="top">
-        <span class="top-mark">AL</span>
-      </header>
+      <div class="site-frame">
+        <header class="site-header">
+          <a class="site-wordmark" href="#welcome">Allyson Lim</a>
+          <nav class="site-nav" aria-label="Sections">
+            <a href="#welcome">Welcome</a>
+            <a href="#profile">Profile</a>
+          </nav>
+        </header>
 
-      <main class="main">
-        <section class="hero">
-          <h1 class="hero-name">
-            <span class="hero-name-line">Allyson</span>
-            <span class="hero-name-line">Lim</span>
-          </h1>
+        <main class="site-main">
+          <section class="welcome" id="welcome">
+            <h1 class="welcome-title">Allyson Lim</h1>
+            <p class="welcome-cred">MA, English — University of Waterloo</p>
 
-          <div class="hero-actions">
-            <a
-              class="pill js-magnetic"
-              href="allyson-lim-resume.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              <span>Résumé</span>
-              <span class="pill-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a
-              class="pill js-magnetic"
-              href="https://uwspace.uwaterloo.ca/items/6673c4e3-0561-48d4-b88e-64e8563caae2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Graduate work</span>
-              <span class="pill-arrow" aria-hidden="true">↗</span>
-            </a>
+            <nav class="subnav" aria-label="Documents">
+              <a href="allyson-lim-resume.pdf" target="_blank" rel="noopener">Résumé</a>
+              <span class="subnav-sep" aria-hidden="true">|</span>
+              <a
+                href="https://uwspace.uwaterloo.ca/items/6673c4e3-0561-48d4-b88e-64e8563caae2"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Graduate work</a
+              >
+            </nav>
+          </section>
+
+          <hr class="section-rule" />
+
+          <div class="profile" id="profile">
+            <section class="profile-block" id="profile-content">
+              <h2 class="section-heading">Key research areas</h2>
+              <p class="key-areas">
+                <strong>Literature, culture, and narrative</strong>;
+                <strong>surveillance, technology, and society</strong>;
+                <strong>speculative fiction</strong>;
+                <strong>science &amp; technology studies</strong>
+              </p>
+
+              <h2 class="section-heading">Writing &amp; professional work</h2>
+              <ul class="body-list">
+                <li>Academic writing &amp; long-form editing</li>
+                <li>Research synthesis &amp; source work</li>
+                <li>Clear briefs &amp; stakeholder-ready copy</li>
+                <li>Collaboration across disciplines</li>
+              </ul>
+
+              <h2 class="section-heading">Education &amp; what’s next</h2>
+              <ul class="body-list">
+                <li>MA, English — University of Waterloo</li>
+                <li>Open to writing, editorial, and comms roles</li>
+              </ul>
+            </section>
           </div>
-        </section>
+        </main>
 
-        <section class="band" id="band">
-          <div class="band-inner">
-            <h2 class="band-kicker">At a glance</h2>
-            <div class="glance-groups">
-              <section class="glance-group" aria-labelledby="glance-writing">
-                <h3 class="glance-group-title" id="glance-writing">
-                  Writing &amp; professional work
-                </h3>
-                <ul class="glance-list">
-                  <li>Academic writing &amp; long-form editing</li>
-                  <li>Research synthesis &amp; source work</li>
-                  <li>Clear briefs &amp; stakeholder-ready copy</li>
-                  <li>Collaboration across disciplines</li>
-                </ul>
-              </section>
-              <section class="glance-group" aria-labelledby="glance-research">
-                <h3 class="glance-group-title" id="glance-research">Research focus</h3>
-                <ul class="glance-list">
-                  <li>Literature, culture, and narrative</li>
-                  <li>Surveillance, technology, and society</li>
-                </ul>
-              </section>
-              <section class="glance-group" aria-labelledby="glance-path">
-                <h3 class="glance-group-title" id="glance-path">Education &amp; what’s next</h3>
-                <ul class="glance-list">
-                  <li>MA, English — University of Waterloo</li>
-                  <li>Open to writing, editorial, and comms roles</li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </section>
-
-        <footer class="foot">
+        <footer class="site-footer">
           <p>© <span id="year"></span> Allyson Lim</p>
         </footer>
-      </main>
+      </div>
     </div>
     <script src="main.js" defer></script>
   </body>

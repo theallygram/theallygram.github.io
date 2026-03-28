@@ -55,47 +55,4 @@
     });
   }
 
-  var pills = document.querySelectorAll(".js-magnetic");
-  pills.forEach(function (pill) {
-    pill.addEventListener("mousemove", function (e) {
-      var r = pill.getBoundingClientRect();
-      var dx = (e.clientX - (r.left + r.width / 2)) * 0.12;
-      var dy = (e.clientY - (r.top + r.height / 2)) * 0.12;
-      pill.style.transform = "translate(" + dx + "px, " + dy + "px)";
-    });
-    pill.addEventListener("mouseleave", function () {
-      pill.style.transform = "";
-    });
-  });
-
-  var band = document.getElementById("band");
-
-  function revealBandIfNeeded() {
-    if (!band || band.classList.contains("is-inview")) return;
-    var r = band.getBoundingClientRect();
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    if (r.top < vh && r.bottom > 0) {
-      band.classList.add("is-inview");
-    }
-  }
-
-  if (band && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            band.classList.add("is-inview");
-            io.unobserve(band);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -5% 0px", threshold: 0 },
-    );
-    io.observe(band);
-  } else if (band) {
-    band.classList.add("is-inview");
-  }
-
-  requestAnimationFrame(revealBandIfNeeded);
-  window.addEventListener("load", revealBandIfNeeded);
 })();
