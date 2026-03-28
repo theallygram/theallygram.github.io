@@ -223,10 +223,15 @@ a:hover {
 .subnav a {
   color: var(--link);
   padding: 0.625rem 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 87, 208, 0.35);
+  text-underline-offset: 0.15em;
+  transition: text-decoration-color 0.15s ease-out;
 }
 
 .subnav a:hover {
   color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
 }
 
 .subnav-sep {
