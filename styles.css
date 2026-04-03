@@ -383,28 +383,24 @@ a:focus-visible {
 .writing-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .writing-item {
-  display: block;
-  padding: 16px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card-bg);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 16px;
+  border-left: 2px solid var(--border);
   color: inherit;
   text-decoration: none;
   transition: border-color 0.15s, background 0.15s;
 }
 
 .writing-item:hover {
-  border-color: var(--accent);
-  background: var(--accent-light);
+  border-left-color: var(--accent);
+  background: var(--card-bg);
   text-decoration: none;
-}
-
-.writing-meta {
-  margin-bottom: 6px;
 }
 
 .writing-type {
@@ -414,20 +410,14 @@ a:focus-visible {
   color: var(--accent);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 48px;
 }
 
 .writing-name {
-  margin: 0 0 4px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--fg);
-}
-
-.writing-blurb {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--muted);
 }
 
 /* —— Toolkit —— */
